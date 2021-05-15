@@ -62,42 +62,8 @@ int main(int argc, char** argv) {
         }
     }
 
-    // DEBUG OUTPUT
-
-    // for (pair_data data : training_input) {
-    //     for (double d : data.input) {
-    //         cout << d << " ";
-    //     }
-    //     cout << data.output << endl;
-    // }
-    // for (attribute_data data : testing_input) {
-    //     for (double d : data.values) {
-    //         cout << d << " ";
-    //     }
-    //     cout << endl;
-    // }
-
-    // for (pair_data data : training_input) {
-    //     std::cout << "data size: " << data.input.size() << std::endl;
-    // }
-
-    /**
-     * End input parsing.
-     */
-
-
     algorithm algo;
-
-    // cout << "Doing algo." << endl;
-
-    // cout << "training size: " << training_input.size() << endl;
-
     node* n = algo.dtl(training_input, minleaf);
-
-    // cout << "Printing tree." << endl;
-    // algo.print_tree(n, 0);
-
-    // cout << "Doing predictions." << endl;
 
     for (attribute_data data : testing_input) {
         // cout << "Predicting..." << endl;
@@ -107,14 +73,6 @@ int main(int argc, char** argv) {
         }
         else {
             cout << ans << endl;
-            // cout << to_string(ans) << endl;
         }
     }
-
-    //  cout << "Done." << endl;
-
-    // cout << "Running algo..." << endl;
-
-    // algo.test(training_input, testing_input, minleaf);
-    // cout << "Hi!" << endl;
 }
